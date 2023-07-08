@@ -6,7 +6,7 @@ pipeline {
         REPO_NAME = 'system-monitorteamdev'
     }
     parameters { string(name: 'CPU_IMAGE', defaultValue: '', description: '') }
-
+    //commented
     stages {
         stage('Deploy') {
             steps {
