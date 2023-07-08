@@ -33,5 +33,12 @@ pipeline {
                 '''
             }
         }
+        stage('Trigger Deploy') {
+            steps {
+                build job: 'deploysystem', wait: false, parameters: [
+                    string(name: 'CPU_IMAGE', value: "${ECR_URL}/${REPO_NAME}:0.0.${BUILD_NUMBER}")
+                ]
+            }
+        }
     }
 }

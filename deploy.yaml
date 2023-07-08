@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-flask-app
-        image: 854171615125.dkr.ecr.us-east-1.amazonaws.com/system-monitorteamdev:0.0.6
+        image: CPUIMAGE   # this is a place holder will be replced by jenkins deploy
         ports:
         - containerPort: 5000
 ---
