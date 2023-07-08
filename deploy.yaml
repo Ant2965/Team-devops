@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-flask-app
+spec:
+  selector:
+    matchLabels:
+      app: my-flask-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: my-flask-app
+    spec:
+      containers:
+      - name: my-flask-app
+        image: 854171615125.dkr.ecr.us-east-1.amazonaws.com/system-monitorteamdev:0.0.6
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myflask
+spec:
+  selector:
+    app: my-flask-app
+  ports:
+    - port: 5000
+      targetPort: 5000
