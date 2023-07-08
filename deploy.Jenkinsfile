@@ -11,6 +11,7 @@ pipeline {
             steps {
 
                 sh '''
+                pip install kubernetes
                 aws eks --region us-east-2 update-kubeconfig --name k8s-batch1
                 python3 eks.py
                 
