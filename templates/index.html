@@ -13,8 +13,8 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>System Monitoring</h1>
+    <div class="container" style="background-color:rgb(242, 112, 12)";>
+        <h1 style="color:blue; font-family:verdana; text-align:center;font-size: 60px;" ><b>SYSTEM MONITORING APPLICATION</b></h1>
         <div id="cpu-gauge"></div>
         <div id="mem-gauge"></div>
         {% if message %}
@@ -69,8 +69,8 @@
            
         };
         
-        var cpuGaugeLayout = { title: "CPU Utilization" };
-        var memGaugeLayout = { title: "Memory Utilization" };
+        var cpuGaugeLayout = { title: "CPU UTILIZATION" };
+        var memGaugeLayout = { title: "MEMORY UTILIZATION" };
         
         Plotly.newPlot('cpu-gauge', [cpuGauge], cpuGaugeLayout);
         Plotly.newPlot('mem-gauge', [memGauge], memGaugeLayout);
