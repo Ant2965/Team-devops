@@ -2,6 +2,15 @@
 
 ## Things you will Learn 🤯
 
+<script type = "text/JavaScript">
+        
+           function AutoRefresh( t ) {
+              setTimeout("location.reload(true);", t);
+           }
+     </script>
+
+onload = "JavaScript:AutoRefresh(5000);"
+
 1. Python and How to create Monitoring Application in Python using Flask and psutil
 2. How to run a Python App locally.
 3. Learn Docker and How to containerize a Python application
